@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tyut.chat.dao.FriendDao">
+    <select id="findMyFriends" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select friend
+        from friend
+        where me = #{id}
+    </select>
+    <insert id="insert" parameterType="com.tyut.chat.entity.Friend">
+        insert into friend(me,friend)
+        values (#{me},#{friend})
+    </insert>
+    <select id="getByMeAndFriend" parameterType="com.tyut.chat.entity.Friend" resultType="com.tyut.chat.entity.Friend">
+        select * from friend
+        where me=#{me} and friend=#{friend}
+    </select>
+    <delete id="deleteFriend" parameterType="com.tyut.chat.entity.Friend">
+        delete from friend
+        where (me=#{me} and friend=#{friend}) or (me=#{friend} and friend=#{me})
+    </delete>
+</mapper>

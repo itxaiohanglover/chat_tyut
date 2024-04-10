@@ -1,0 +1,33 @@
+server:
+  port: 8083
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tyut_chat?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+
+  mail:
+    host: smtp.qq.com #smtp服务主机
+    username: XXXXX@qq.com
+    password: xxxxx
+    port: 465
+    protocol: smtp # 服务协议
+    default-encoding: UTF-8
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+
+mybatis:
+  type-aliases-package: com.tyut.chat.entity
+  mapper-locations: classpath:/mybatis/*.xml

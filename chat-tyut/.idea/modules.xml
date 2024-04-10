@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/chat-tyut.iml" filepath="$PROJECT_DIR$/.idea/chat-tyut.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket_server/websocket_server.iml" filepath="$PROJECT_DIR$/websocket_server/websocket_server.iml" />
+    </modules>
+  </component>
+</project>
